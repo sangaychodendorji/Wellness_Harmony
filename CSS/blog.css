@@ -705,5 +705,9 @@ section:target {
     .footer {
         justify-content: center; /* Center social icons on mobile */
     }
+
+    .sangaycon h1 {
+  margin-top: 35px;
+}
 }
 

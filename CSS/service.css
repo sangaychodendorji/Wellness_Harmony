@@ -561,6 +561,17 @@ body.menu-open {
           padding: 8px;
       }
 
+      .hero-content h1{
+       font-size: 2.5rem;
+        
+      }
+      .hero-content p{
+        font-size: 1rem;
+      }
+      .abcd {
+        font-size: 1.5rem;
+      }
+
        /* Footer Section */
     .footer-container {
         grid-template-columns: 1fr;
