@@ -679,6 +679,7 @@ section:target {
   .sangay-img-card {
     flex-direction: column;
     text-align: center;
+
   }
 
   .sangay-img-card img {
@@ -706,6 +707,11 @@ section:target {
     .sangaycon h1 {
   margin-top: 35px;
 }
+
+.sangay-card-mini {
+  margin-left: 5px;
+}
+
 }
 
 

@@ -18,26 +18,28 @@ const nextBtn = document.querySelector('.carousel-btn.next');
 
 let index = 0;
 
+function updateCarousel() {
+  const cards = document.querySelectorAll('.sangay-card-mini');
+  const cardWidth = cards[0].offsetWidth + 20; // include margin
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
 nextBtn.addEventListener('click', () => {
   const cards = document.querySelectorAll('.sangay-card-mini');
-  if (index < cards.length - 1) index++;
-  track.style.transform = `translateX(-${index * 220}px)`;
+  if (index < cards.length - 1) {
+    index++;
+    updateCarousel();
+  }
 });
 
 prevBtn.addEventListener('click', () => {
-  if (index > 0) index--;
-  track.style.transform = `translateX(-${index * 220}px)`;
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
 });
 
-const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
-const overlay = document.querySelector(".nav-overlay");
-
-// OPEN / CLOSE MENU
-menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("active");
-    overlay.classList.toggle("active");
-});
+window.addEventListener('resize', updateCarousel);
 
 // CLOSE WHEN CLICKING OUTSIDE (OVERLAY)
 overlay.addEventListener("click", () => {
